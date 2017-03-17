@@ -16,7 +16,7 @@ public class TurvaKonf extends WebSecurityConfigurerAdapter{
       //anyRequest().authenticated();
   }
   @Autowired
-  public void configureGlobal(AuthenticationManagerBuilder auth) throw Exception{
+  public void configureGlobal(AuthenticationManagerBuilder auth) throws Exception{
     auth.inMemoryAuthentication().withUser("juku").password("kala").roles("tavakasutaja");
   }
 }
