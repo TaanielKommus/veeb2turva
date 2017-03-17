@@ -15,6 +15,9 @@ public class Rakendus {
 
 	@RequestMapping("/tervita")
 	String tervitusfunktsioon3(String eesnimi){
+		if(eesnimi.length()==0){
+			return "Nime pikkus on 0";
+		}
 		return "Tere, "+eesnimi;
 	}
 
